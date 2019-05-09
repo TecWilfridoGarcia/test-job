@@ -1,0 +1,65 @@
+.some-page-wrapper{
+    padding-top: 3%;
+    margin-left: 7%; 
+    margin-right: 7%;    
+    box-shadow: 10px 10px 7px -8px #696569;    
+    border-style: solid;    
+    border-width: 1px;    
+    border-radius: 5px;   
+    margin-top: 30px;
+    background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    flex-basis: 100%;
+padding-left: 9px;
+    .blue-column{
+        padding-right: 15px;
+        padding-left: 14px;
+}
+    
+    .green-column{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        form{
+             .form{
+            input{
+                margin-bottom: 10px;
+                width: 60%;
+            }
+            select{
+              margin-bottom: 10px;
+      
+            }
+           
+        }
+        button{
+                margin-bottom: 14px;
+            }
+        }
+       
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .column {
+      flex: 1
+    }
+  
+    .double-column {
+      flex: 2
+    }
+  }
+
+}

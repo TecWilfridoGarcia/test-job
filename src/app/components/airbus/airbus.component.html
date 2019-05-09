@@ -1,0 +1,53 @@
+<div class='some-page-wrapper'>
+
+  <div class='row'>
+    <div class='column'>
+      <div class='blue-column'>
+        <h2>Hola bienvenido, sabemos que quieres viajar en un Airbus, por favor diligencia el siguiente formulario.</h2>
+      </div>
+    </div>
+    <div class='column'>
+      <div class='green-column'>
+        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+          <input class="form-input" type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+          <div class="form">
+            <input class="form-input" name="name" #name="ngModel" [(ngModel)]="service.formData.name" class=""
+              placeholder="Nombre Completo" required>
+          </div>
+          <div class="form">
+            <input class="form-input" name="email" #email="ngModel" [(ngModel)]="service.formData.email" class=""
+              placeholder="Correo Electronico">
+          </div>
+          <div class="form-row">
+            <div class="form">
+              <input class="form-input" name="age" #age="ngModel" [(ngModel)]="service.formData.age" placeholder="Edad">
+            </div>
+            <div class="form">
+              <input class="form-input" name="phone" #phone="ngModel" [(ngModel)]="service.formData.phone"
+                placeholder="Numeo Celular">
+            </div>
+
+            <div class="form">
+              <input class="form-input" type="date" name="date" #phone="ngModel" [(ngModel)]="service.formData.date"
+                placeholder="Fecha">
+            </div>
+          </div>
+          <div class="form">
+
+            <select class="form-control" id="power" required [(ngModel)]="service.formData.model" name="model"
+              #power="ngModel">
+              <option value="model">Airbus-A340</option>
+              <option value="model">Airbus-A340</option>
+              <option value="model">Airbus-A340</option>
+              <option value="" selected>Modelo del avion</option>
+            </select>
+          </div>
+
+          <div class="form">
+            <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
